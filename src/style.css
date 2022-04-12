@@ -20,7 +20,8 @@ a {
   color: #eefbfb;
 }
 
-header {
+header,
+footer {
   display: flex;
   width: 90vw;
   height: 10vh;
@@ -53,4 +54,11 @@ h1 {
 .nav-item:not(:last-child) {
   border-right: 2.5px solid #007cc7;
   padding-right: 1rem;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
