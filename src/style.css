@@ -75,7 +75,6 @@ h1 {
 
 /* end main */
 
-
 /* modal start */
 .modal-container {
   position: fixed;
@@ -131,20 +130,14 @@ h1 {
   z-index: 10;
 }
 
-
 .btn-close-modal:hover {
   color: #4da8da;
   background-color: #203647;
-
 }
 
 .btn-close-modal:active {
   color: #eefbfb;
-  background-color: #4da8da;;
-}
-
-figure {
-  width: 25%;
+  background-color: #4da8da;
 }
 
 .modal-card img {
@@ -152,14 +145,7 @@ figure {
   border-radius: 5px;
 }
 
-.modal-card iframe {
-  height: 40rem;
-  width: 100%;
-  border-radius: 20px;
-}
-
 .modal-card .info-container {
-  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -169,20 +155,14 @@ figure {
 }
 
 .modal-card h3 {
-  /* width: 100%; */
-  color: #eefbfb;
   color: #007cc7;
   font-size: 25px;
   font-weight: 700;
   text-align: center;
-  /* padding: 1rem; */
-  /* margin-bottom: 1rem; */
 }
 
 .modal-card p {
-  /* width: 90%; */
   text-align: center;
-  /* margin-bottom: 2rem; */
   font-size: 16px;
   line-height: 20px;
 }
@@ -191,27 +171,13 @@ figure {
   color: #007cc7;
 }
 
-.modal-card p span {
-  display: inline-block;
-  font-weight: 300;
-  color: #000;
-  background-color: rgba(243, 165, 2, 0.2);
-  padding: 1rem 2rem;
-  margin-bottom: 1rem;
-  border-radius: 20px;
-  font-size: 1.6rem;
-}
-
-.modal-card p.description {
-  text-align: justify;
-}
-
 .form {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   row-gap: 8px;
   margin-top: 10px;
+  padding: 10px;
 }
 
 .form input {
@@ -242,4 +208,5 @@ figure {
 .form button:hover {
   border: 1px solid white;
 }
+
 /* modal end */
