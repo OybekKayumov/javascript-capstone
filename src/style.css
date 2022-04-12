@@ -19,3 +19,38 @@ body {
 a {
   color: #eefbfb;
 }
+
+header {
+  display: flex;
+  width: 90vw;
+  height: 10vh;
+  justify-content: space-between;
+  align-items: center;
+  margin: 2.5rem auto;
+  padding: 0 2rem;
+  font-size: 2rem;
+  border: 3px solid #203647;
+  border: 3px solid #007cc7;
+  border: 3px solid #4da8da;
+}
+
+h1 {
+  font-size: 34px;
+}
+
+.logo {
+  font-size: 36px;
+  color: #007cc7;
+}
+
+.nav-list {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+  cursor: pointer;
+}
+
+.nav-item:not(:last-child) {
+  border-right: 2.5px solid #007cc7;
+  padding-right: 1rem;
+}
