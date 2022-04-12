@@ -1,7 +1,56 @@
-.hello {
-  color: red;
+@import url('https://fonts.googleapis.com/css2?family=Asap:ital,wght@1,400;1,500;1,600;1,700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Asap', sans-serif;
+  font-size: 65%;
 }
 
 body {
-  background-color: bisque;
+  color: #eefbfb;
+  background-color: #12232e;
+}
+
+a {
+  color: #eefbfb;
+}
+
+header {
+  display: flex;
+  width: 90vw;
+  height: 10vh;
+  justify-content: space-between;
+  align-items: center;
+  margin: 2.5rem auto;
+  padding: 0 2rem;
+  font-size: 2rem;
+  border: 3px solid #203647;
+  border: 3px solid #007cc7;
+  border: 3px solid #4da8da;
+}
+
+h1 {
+  font-size: 34px;
+}
+
+.logo {
+  font-size: 36px;
+  color: #007cc7;
+}
+
+.nav-list {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+  cursor: pointer;
+}
+
+.nav-item:not(:last-child) {
+  border-right: 2.5px solid #007cc7;
+  padding-right: 1rem;
 }
