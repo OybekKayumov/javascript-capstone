@@ -1,7 +1,21 @@
-.hello {
-  color: red;
+@import url('https://fonts.googleapis.com/css2?family=Asap:ital,wght@1,400;1,500;1,600;1,700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Asap', sans-serif;
+  font-size: 65%;
 }
 
 body {
-  background-color: bisque;
+  color: #eefbfb;
+  background-color: #12232e;
+}
+
+a {
+  color: #eefbfb;
 }
