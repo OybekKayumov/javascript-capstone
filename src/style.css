@@ -74,3 +74,139 @@ h1 {
 }
 
 /* end main */
+
+/* modal start */
+.modal-container {
+  position: fixed;
+  width: 80%;
+  height: 95%;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid #bec4c1;
+  border-radius: 10px;
+  background-color: #12232e;
+}
+
+.bg-body-modal {
+  background-color: #000000e6;
+  filter: blur(5px);
+}
+
+.modal-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 15px;
+  margin-top: 5px;
+}
+
+.show-modal {
+  display: flex;
+}
+
+.modal-header h2 {
+  font-size: 40px;
+}
+
+.btn-close-modal {
+  position: absolute;
+  top: 8px;
+  right: 38px;
+  align-self: flex-end;
+  border-style: none;
+  border-radius: 50%;
+  background-color: #fff;
+  font-size: 3rem;
+  cursor: pointer;
+  outline: none;
+  width: 4rem;
+  height: 4rem;
+  margin: 2rem 2rem 0 0;
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+}
+
+.btn-close-modal:hover {
+  color: #4da8da;
+  background-color: #203647;
+}
+
+.btn-close-modal:active {
+  color: #eefbfb;
+  background-color: #4da8da;
+}
+
+.modal-card img {
+  width: 15%;
+  border-radius: 5px;
+}
+
+.modal-card .info-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 50px;
+  row-gap: 5px;
+  margin-top: 10px;
+}
+
+.modal-card h3 {
+  color: #007cc7;
+  font-size: 25px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.modal-card p {
+  text-align: center;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.rating {
+  color: #007cc7;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  row-gap: 8px;
+  margin-top: 10px;
+  padding: 10px;
+}
+
+.form input {
+  padding: 5px;
+  height: 35px;
+  border-radius: 5px;
+  font-size: 20px;
+}
+
+.form textarea {
+  height: 100px;
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 20px;
+}
+
+.form button {
+  width: 120px;
+  height: 40px;
+  font-size: 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007cc7;
+  color: white;
+  cursor: pointer;
+}
+
+.form button:hover {
+  border: 1px solid white;
+}
+
+/* modal end */
