@@ -1,4 +1,5 @@
 import { updateLikes, addLike } from './movieslikes';
+import { countItems } from './moviesCounter';
 
 const moviesDisplay = (data) => {
   const moviesSection = document.querySelector('.cards');
@@ -30,6 +31,8 @@ const moviesDisplay = (data) => {
       likesBtn.innerHTML = `${Number(num[0]) + 1} likes`;
     });
   });
+
+  countItems(data);
   updateLikes();
 };
 
