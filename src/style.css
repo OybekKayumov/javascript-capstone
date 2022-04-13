@@ -89,6 +89,7 @@ h1 {
   border: 1px solid #bec4c1;
   border-radius: 10px;
   background-color: #12232e;
+  overflow-y: auto;
 }
 
 .bg-body-modal {
@@ -207,6 +208,16 @@ h1 {
 
 .form button:hover {
   border: 1px solid white;
+}
+
+.comment-container {
+  font-size: 20px;
+  list-style: none;
+  row-gap: 5px;
+}
+
+.comment-container li {
+  margin-top: 10px;
 }
 
 /* modal end */

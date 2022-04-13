@@ -13,31 +13,30 @@ const getComment = async (id) => {
   return result;
 };
 
-const commentTemplate = (date, name, comment) => `
-    <li>
-      <span>${date}</span>
-      <span>${name}: </span>
-      <span>${comment}</span>
-    </li>
-`;
+const commentsCounter = async (id) => {
+  const commentsNum = await getComment(id);
+  if (!commentsNum.length) {
+    return 0;
+  }
+  return commentsNum.length;
+};
 
 const displayComments = async (id) => {
-  const ul = document.querySelector('ul');
+  const ul = document.querySelector('.comment-container');
   const commentArr = await getComment(id);
   ul.innerHTML = '';
-  let html = '';
 
   commentArr.forEach((elem) => {
-    const commentItem = commentTemplate(
-      elem.creation_date,
-      elem.username,
-      elem.comment,
-    );
-    html += commentItem;
+    const commentItem = `
+    <li>
+      <span>${elem.creation_date}</span>
+      <span>${elem.username}: </span>
+      <span>${elem.comment}</span>
+    </li>`;
+    ul.innerHTML += commentItem;
   });
-  ul.insertAdjacentHTML('beforeend', html);
 };
 
 export {
-  displayComments, getComment,
+  displayComments, getComment, commentsCounter,
 };
