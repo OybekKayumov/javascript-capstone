@@ -14,7 +14,7 @@ const moviesDisplay = (data) => {
           </p>
           <div class="card-info">
             <button class="card-comments">Comments</button>
-            <button class="card-reservations">Reservations</button>
+            <button class="card-reserve">Reservations</button>
             <button class=" card-likes">Likes</button>
           </div>
         </div>    
