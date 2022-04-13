@@ -78,7 +78,7 @@ h1 {
 /* modal start */
 .modal-container {
   position: fixed;
-  width: 80%;
+  width: 60%;
   height: 95%;
   display: none;
   flex-direction: column;
@@ -142,7 +142,7 @@ h1 {
 }
 
 .modal-card img {
-  width: 15%;
+  width: 20%;
   border-radius: 5px;
 }
 
@@ -214,6 +214,7 @@ h1 {
   font-size: 20px;
   list-style: none;
   row-gap: 5px;
+  margin-bottom: 10px;
 }
 
 .comment-container li {

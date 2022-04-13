@@ -28,12 +28,12 @@ const postComment = async (username, comment, id) => {
   return result;
 };
 
-const commentsCounter = async (id) => {
-  const commentsNum = await getComment(id);
-  if (!commentsNum.length) {
+const countComment = async (id) => {
+  const comments = await getComment(id);
+  if (!comments.length) {
     return 0;
   }
-  return commentsNum.length;
+  return comments.length;
 };
 
 const displayComments = async (id) => {
@@ -59,10 +59,10 @@ const addComment = async (e, form, id) => {
 
   await postComment(name.value, comment.value, id);
   await displayComments(id);
-  num.textContent = await commentsCounter(id);
+  num.textContent = await countComment(id);
   form.reset();
 };
 
 export {
-  displayComments, getComment, addComment,
+  displayComments, getComment, addComment, countComment,
 };
