@@ -1,3 +1,5 @@
+import { updateLikes, addLike } from './movieslikes';
+
 const moviesDisplay = (data) => {
   const moviesSection = document.querySelector('.cards');
   data.forEach((movie) => {
@@ -15,13 +17,20 @@ const moviesDisplay = (data) => {
           <div class="card-info">
             <button class="card-comments">Comments</button>
             <button class="card-reservations">Reservations</button>
-            <button class=" card-likes">Likes</button>
+            <button id=${movie.id} class=" card-likes">Likes</button>
           </div>
         </div>    
     `;
 
     moviesSection.appendChild(card);
+    const likesBtn = document.getElementById(`${movie.id}`);
+    likesBtn.addEventListener('click', () => {
+      addLike(movie.id);
+      const num = likesBtn.textContent.split(' ');
+      likesBtn.innerHTML = `${Number(num[0]) + 1} likes`;
+    });
   });
+  updateLikes();
 };
 
 export default moviesDisplay;
