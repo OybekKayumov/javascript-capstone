@@ -90,7 +90,6 @@ h1 {
   border-radius: 10px;
   background-color: #12232e;
   overflow-y: auto;
-
 }
 
 .bg-body-modal {
@@ -218,7 +217,7 @@ h1 {
 }
 
 .comment-container li {
-   margin-top: 10px;
+  margin-top: 10px;
 }
 
 /* modal end */
