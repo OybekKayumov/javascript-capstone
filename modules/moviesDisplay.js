@@ -1,5 +1,5 @@
-import { updateLikes, addLike } from './movieslikes';
-import { countItems } from './moviesCounter';
+import { updateLikes, addLike } from './movieslikes.js';
+import { countItems } from './moviesCounter.js';
 
 const moviesDisplay = (data) => {
   const moviesSection = document.querySelector('.cards');
