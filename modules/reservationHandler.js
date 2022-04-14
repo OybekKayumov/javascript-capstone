@@ -29,21 +29,14 @@ const getReservation = async (id) => {
   return result;
 };
 
-// const countReservation = async (id) => {
-//   const reserveNum = await getReservation(id);
-//   if (!reserveNum.length) {
-//     return 0;
-//   }
-//   return reserveNum.length;
-// };
+const reservationCounter = (data) => {
+  if (!data.length) return 0;
+  return data.length;
+};
 
-const countReservation = (data) => {
-  let reservationCount = 0;
-  data.forEach(() => {
-    reservationCount += 1;
-  });
-
-  return reservationCount;
+const countReservation = async (id) => {
+  const reserveNum = await getReservation(id);
+  return reservationCounter(reserveNum);
 };
 
 const displayReservation = async (id) => {
@@ -64,8 +57,7 @@ const displayReservation = async (id) => {
   });
 
   const num = document.querySelector('.counter');
-  // num.textContent = await countReservation(id);
-  num.textContent = countReservation(reserveArr);
+  num.textContent = await countReservation(id);
 };
 
 const addReservation = async (e, form, id) => {
@@ -89,5 +81,5 @@ const addReservation = async (e, form, id) => {
 };
 
 export {
-  displayReservation, addReservation, countReservation, getReservation,
+  displayReservation, addReservation, countReservation, getReservation, reservationCounter,
 };
