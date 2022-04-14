@@ -1,7 +1,7 @@
 /** * @jest-environment jsdom */
 
 // import { reserveCounter } from "../modules/reserve.js";
-import { countReservation } from '../../modules/reservationHandler.js';
+import { reservationCounter } from '../../modules/reservationHandler.js';
 
 test('the reservation counter test', () => {
   const reservationTest = [
@@ -32,6 +32,6 @@ test('the reservation counter test', () => {
     },
   ];
 
-  const count = countReservation(reservationTest);
+  const count = reservationCounter(reservationTest);
   expect(count).toBe(5);
 });
