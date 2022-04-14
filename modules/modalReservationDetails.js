@@ -1,9 +1,9 @@
 import {
   displayReservation,
   addReservation,
+  countReservation,
 } from './reservationHandler.js';
 
-// eslint-disable-next-line prefer-const
 let reservationLength = 0;
 
 const modalReservation = (movie, reservationLength) => `
@@ -55,12 +55,11 @@ const createModal = (movieData, reservationLength) => {
 
 const handleReservationModal = (movies) => {
   const reservationBtn = document.querySelectorAll('.card-reserve');
-  // const reserveBtn = document.querySelectorAll('.card__reservations');
 
   reservationBtn.forEach((btn, index) => {
     btn.addEventListener('click', async () => {
       openModal();
-
+      reservationLength = await countReservation(movies[index].id);
       const urlBase = 'https://api.tvmaze.com/shows/';
       const url = `${urlBase}${movies[index].id}`;
       const movieData = await fetch(url)

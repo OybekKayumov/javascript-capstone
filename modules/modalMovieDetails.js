@@ -61,7 +61,6 @@ const createModal = (movieData, commentsLength) => {
 
 const handleMovieModal = (movies) => {
   const openModalBtn = document.querySelectorAll('.card-comments');
-  // const openModalBtn = document.querySelectorAll('.card__comments');
 
   openModalBtn.forEach((btn, index) => {
     btn.addEventListener('click', async () => {
