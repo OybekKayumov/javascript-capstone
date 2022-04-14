@@ -64,8 +64,17 @@ const addReservation = async (e, form, id) => {
   const { name, startDate, endDate } = form.elements;
 
   await postReservation(name.value, startDate.value, endDate.value, id);
-  await displayReservation(id);
-  num.textContent = await countReservation(id);
+  const ul = document.querySelector('.reservation-container');
+  const dateStart = new Date(startDate.value);
+  const dateEnd = new Date(endDate.value);
+
+  ul.innerHTML += `
+  <li>
+    <span>${dateStart.toLocaleDateString('en-US')} -</span>
+    <span>${dateEnd.toLocaleDateString('en-US')} </span>
+    <span>by ${name.value}</span>
+  </li>`;
+  num.textContent = parseInt(num.textContent, 10) + 1;
   form.reset();
 };
 
