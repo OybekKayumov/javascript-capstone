@@ -2,7 +2,7 @@ const baseURL = 'https://us-central1-involvement-api.cloudfunctions.net/capstone
 
 const appID = 'Ngyhlqhta3I7behhBDEq';
 
-const getComment = async (id) => {
+const getComments = async (id) => {
   const resolve = await window.fetch(`${baseURL}/${appID}/comments?item_id=${id}`);
   const result = await resolve.json();
 
@@ -28,31 +28,17 @@ const postComment = async (username, comment, id) => {
   return result;
 };
 
-// const countComment = async (id) => {
-//   const comments = await getComment(id);
-//   if (!comments.length) {
-//     return 0;
-//   }
-//   return comments.length;
-// };
-
-const commentsCounter = (commentsNum) => {
-  if (!commentsNum.length) {
+const countComment = async (id) => {
+  const comments = await getComments(id);
+  if (!comments.length) {
     return 0;
   }
-
-  return commentsNum.length;
-};
-
-const countComment = async (id) => {
-  const commentsNum = await getComment(id);
-
-  return countComment(commentsNum);
+  return comments.length;
 };
 
 const displayComments = async (id) => {
   const ul = document.querySelector('.comment-container');
-  const commentArr = await getComment(id);
+  const commentArr = await getComments(id);
   ul.innerHTML = '';
 
   commentArr.forEach((elem) => {
@@ -68,15 +54,24 @@ const displayComments = async (id) => {
 
 const addComment = async (e, form, id) => {
   e.preventDefault();
+  const ul = document.querySelector('.comment-container');
   const { name, comment } = form.elements;
   const num = document.querySelector('.counter');
 
   await postComment(name.value, comment.value, id);
-  await displayComments(id);
-  num.textContent = await countComment(id);
+  const date = new Date();
+
+  ul.innerHTML += `
+    <li>
+      <span>${date.toLocaleDateString('en-US')}</span>
+      <span>${name.value}: </span>
+      <span>${comment.value}</span>
+    </li>`;
+
+  num.textContent = parseInt(num.textContent, 10) + 1;
   form.reset();
 };
 
 export {
-  displayComments, getComment, addComment, countComment, commentsCounter,
+  displayComments, getComments, addComment, countComment,
 };
