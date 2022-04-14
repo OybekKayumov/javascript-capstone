@@ -6,7 +6,7 @@ import {
 
 let commentsLength = 0;
 
-const modalTemplate = (movie, commentsLength) => `
+const modalMovie = (movie, commentsLength) => `
     <button class="btn-close-modal">x</button>
     <div class="modal-header">
       
@@ -22,7 +22,7 @@ const modalTemplate = (movie, commentsLength) => `
     </div>
     <div class="info-container comments">
       <h3>Comments (<span class="counter">${commentsLength}</span>)</h2>
-      <ul class="comment-container"></ul>
+      <ul class="comment-container list"></ul>
       <h3>Add a comment</h3>
       <div class="msgErrorContainer"></div>
       <form class='form' action="index_submit" method="POST" accept-charset="utf-8">
@@ -53,13 +53,13 @@ const closeModal = () => {
 const createModal = (movieData, commentsLength) => {
   const modalArticle = document.createElement('div');
   modalArticle.className = 'modal-card';
-  modalArticle.innerHTML = modalTemplate(movieData, commentsLength);
+  modalArticle.innerHTML = modalMovie(movieData, commentsLength);
   modalSection.appendChild(modalArticle);
   const closeModalBtn = document.querySelector('.btn-close-modal');
   closeModalBtn.addEventListener('click', closeModal);
 };
 
-const handleModal = (movies) => {
+const handleMovieModal = (movies) => {
   const openModalBtn = document.querySelectorAll('.card-comments');
   // const openModalBtn = document.querySelectorAll('.card__comments');
 
@@ -83,4 +83,4 @@ const handleModal = (movies) => {
   });
 };
 
-export default handleModal;
+export default handleMovieModal;

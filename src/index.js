@@ -1,12 +1,12 @@
 import './style.css';
 
-import getMovies from '../modules/movies.fetch';
-import moviesDisplay from '../modules/moviesDisplay';
-import handleModal from '../modules/modalMovieDetails.js';
-import reserveHandle from '../modules/reserveModal';
+import getMovies from '../modules/movies.fetch.js';
+import moviesDisplay from '../modules/moviesDisplay.js';
+import handleReservationModal from '../modules/modalReservationDetails.js';
+import handleMovieModal from '../modules/modalMovieDetails.js';
 
 getMovies().then((movieList) => {
   moviesDisplay(movieList);
-  handleModal(movieList);
-  reserveHandle(movieList);
+  handleMovieModal(movieList);
+  handleReservationModal(movieList);
 });
