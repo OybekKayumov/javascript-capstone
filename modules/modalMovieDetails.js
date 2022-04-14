@@ -1,9 +1,10 @@
 import {
   addComment,
+  countComment,
   displayComments,
 } from './moviesComment.js';
 
-const commentsLength = 0;
+let commentsLength = 0;
 
 const modalTemplate = (movie, commentsLength) => `
     <button class="btn-close-modal">x</button>
@@ -65,6 +66,7 @@ const handleModal = (movies) => {
   openModalBtn.forEach((btn, index) => {
     btn.addEventListener('click', async () => {
       openModal();
+      commentsLength = await countComment(movies[index].id);
       const urlBase = 'https://api.tvmaze.com/shows/';
       const url = `${urlBase}${movies[index].id}`;
       const movieData = await fetch(url)
