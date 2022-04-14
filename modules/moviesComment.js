@@ -42,13 +42,13 @@ const displayComments = async (id) => {
   ul.innerHTML = '';
 
   commentArr.forEach((elem) => {
-    const commentItem = `
+    const date = new Date(elem.creation_date);
+    ul.innerHTML += `
     <li>
-      <span>${elem.creation_date}</span>
+      <span>${date.toLocaleDateString('en-US')}</span>
       <span>${elem.username}: </span>
       <span>${elem.comment}</span>
     </li>`;
-    ul.innerHTML += commentItem;
   });
 };
 
