@@ -3,7 +3,7 @@ const baseURL = 'https://us-central1-involvement-api.cloudfunctions.net/capstone
 const appID = 'Ngyhlqhta3I7behhBDEq';
 
 const getComment = async (id) => {
-  const resolve = await fetch(`${baseURL}/${appID}/comments?item_id=${id}`);
+  const resolve = await window.fetch(`${baseURL}/${appID}/comments?item_id=${id}`);
   const result = await resolve.json();
 
   if (!result.length) {
@@ -28,12 +28,26 @@ const postComment = async (username, comment, id) => {
   return result;
 };
 
-const countComment = async (id) => {
-  const comments = await getComment(id);
-  if (!comments.length) {
+// const countComment = async (id) => {
+//   const comments = await getComment(id);
+//   if (!comments.length) {
+//     return 0;
+//   }
+//   return comments.length;
+// };
+
+const commentsCounter = (commentsNum) => {
+  if (!commentsNum.length) {
     return 0;
   }
-  return comments.length;
+
+  return commentsNum.length;
+};
+
+const countComment = async (id) => {
+  const commentsNum = await getComment(id);
+
+  return countComment(commentsNum);
 };
 
 const displayComments = async (id) => {
@@ -64,5 +78,5 @@ const addComment = async (e, form, id) => {
 };
 
 export {
-  displayComments, getComment, addComment, countComment,
+  displayComments, getComment, addComment, countComment, commentsCounter,
 };
