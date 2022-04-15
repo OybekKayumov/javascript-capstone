@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Asap:ital,wght@1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
 
 * {
   margin: 0;
@@ -18,6 +19,21 @@ body {
 
 a {
   color: #eefbfb;
+  all: unset;
+}
+
+button {
+  border-radius: 5px;
+  border: 2px solid #007cc7;
+  background-color: #4da8da;
+  height: 3rem;
+  width: 9rem;
+}
+
+button:hover {
+  border: #eefbfb;
+  background-color: #4da8da;
+  color: #eefbfb;
 }
 
 header,
@@ -27,14 +43,24 @@ footer {
   height: 10vh;
   justify-content: space-between;
   align-items: center;
-  margin: 2.5rem auto;
+  margin: 2rem auto;
   padding: 0 2rem;
   font-size: 2rem;
   border: 3px solid #4da8da;
+  border-radius: 10px;
+  background-color: #e5e5e5;
+  z-index: 1;
 }
 
 h1 {
   font-size: 34px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.white-blue {
+  color: #eefbfb;
+  background-color: #4da8da;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 .logo {
@@ -47,11 +73,23 @@ h1 {
   list-style: none;
   gap: 2rem;
   cursor: pointer;
+  font-size: 18px;
+  font-family: 'Oswald', sans-serif;
+  color: #555;
 }
 
 .nav-item:not(:last-child) {
   border-right: 2.5px solid #007cc7;
   padding-right: 1rem;
+}
+
+.nav-item:hover {
+  color: #4da8da;
+}
+
+footer h1 {
+  color: #007cc7;
+  font-size: 30px;
 }
 
 /* main */
@@ -71,6 +109,42 @@ h1 {
   border: 3px solid #4da8da;
   border-radius: 10px;
   padding: 1.4rem;
+}
+
+.card-image-container {
+  display: block;
+  max-width: 30rem;
+  border-radius: 7px;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.card-image-container:hover {
+  transform: scale(1.1);
+}
+
+.card-title {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.card-likes {
+  color: #cc2020;
+  margin-block-start: 1.33em;
+  margin-block-end: 1.33em;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+  font-weight: bold;
+  background-color: #eefbfb;
+}
+
+.card-likes:hover {
+  background-color: #cc2020;
+}
+
+.card-likes:active {
+  background-color: #671050;
 }
 
 /* end main */
