@@ -163,8 +163,10 @@ footer h1 {
 }
 
 .follow {
-  color: #12232e;
-  font-size: 18px;
+  color: #007cc7;
+  font-size: 14px;
+  font-family: 'Asap', sans-serif;
+  font-weight: 600;
 }
 
 .connect {
@@ -181,7 +183,7 @@ footer h1 {
 .fa-linkedin,
 .fa-medium,
 .fa-angellist {
-  color: #007cc7;
+  color: #ec4252;
 }
 
 /* main */
@@ -222,7 +224,7 @@ footer h1 {
 }
 
 .card-likes {
-  color: #cc2020;
+  color: #ec4252;
   margin-block-start: 1.33em;
   margin-block-end: 1.33em;
   margin-inline-start: 0;
@@ -232,7 +234,7 @@ footer h1 {
 }
 
 .card-likes:hover {
-  background-color: #cc2020;
+  background-color: #ec4252;
 }
 
 .card-likes:active {
@@ -368,13 +370,13 @@ footer h1 {
   border: none;
   border-radius: 5px;
   background-color: #007cc7;
-  color: white;
+  color: #fff;
   cursor: pointer;
   margin-top: 10px;
 }
 
 .form button:hover {
-  border: 1px solid white;
+  border: 1px solid #fff;
 }
 
 .list {
