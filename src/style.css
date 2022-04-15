@@ -1,0 +1,397 @@
+@import url('https://fonts.googleapis.com/css2?family=Asap:ital,wght@1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Asap', sans-serif;
+  font-size: 65%;
+}
+
+body {
+  color: #eefbfb;
+  background-color: #12232e;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  color: #eefbfb;
+  all: unset;
+}
+
+button {
+  border-radius: 5px;
+  border: 2px solid #007cc7;
+  background-color: #4da8da;
+  height: 3rem;
+  width: 9rem;
+  font-weight: bolder;
+}
+
+button:hover {
+  border: #eefbfb;
+  background-color: #4da8da;
+  color: #eefbfb;
+  font-weight: bolder;
+}
+
+.sub-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin: 24px 5%;
+}
+
+.movies {
+  font-weight: 300;
+  color: #eefbfb;
+  background-color: #007cc7;
+  padding: 4px 16px;
+  border-radius: 4px;
+}
+
+.filter {
+  font-weight: 300;
+  color: #203647;
+  background-color: #eefbfb;
+  padding: 4px 16px;
+  border-radius: 4px;
+}
+
+.center {
+  text-align: center;
+  margin-bottom: 50px;
+  font-family: 'Rubik', sans-serif;
+  font-size: 18px;
+}
+
+.pagination a {
+  cursor: pointer;
+  color: #12232e;
+  padding: 8px 16px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+  background-color: #eefbfb;
+  border-radius: 4px;
+}
+
+.pagination a.active,
+.blue {
+  background-color: #007cc7;
+  color: #eefbfb;
+}
+
+.pagination a.hover {
+  background-color: #eefbfb;
+  color: #007cc7;
+}
+
+header,
+footer {
+  display: flex;
+  width: 90vw;
+  height: 10vh;
+  justify-content: space-between;
+  align-items: center;
+  margin: 2rem auto;
+  padding: 0 2rem;
+  font-size: 2rem;
+  border: 3px solid #4da8da;
+  border-radius: 10px;
+  background-color: #e5e5e5;
+  z-index: 1;
+}
+
+h1 {
+  font-size: 34px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.white-blue {
+  color: #eefbfb;
+  background-color: #4da8da;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.logo {
+  font-size: 36px;
+  color: #007cc7;
+}
+
+.nav-list {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+  cursor: pointer;
+  font-size: 18px;
+  font-family: 'Oswald', sans-serif;
+  color: #555;
+}
+
+.nav-item:not(:last-child) {
+  border-right: 2.5px solid #007cc7;
+  padding-right: 1rem;
+}
+
+.nav-item:hover {
+  color: #4da8da;
+}
+
+.form-control {
+  width: 60%;
+  height: 34px;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #555;
+  background-image: none;
+  border: 2px solid #4da8da;
+  border-radius: 4px;
+}
+
+footer h1 {
+  color: #203647;
+  font-size: 26px;
+}
+
+.follow {
+  color: #007cc7;
+  font-size: 14px;
+  font-family: 'Asap', sans-serif;
+  font-weight: 600;
+}
+
+.connect {
+  display: flex;
+  gap: 1rem;
+}
+
+.fa:hover {
+  opacity: 0.7;
+}
+
+.fa-twitter,
+.fa-github,
+.fa-linkedin,
+.fa-medium,
+.fa-angellist {
+  color: #ec4252;
+}
+
+/* main */
+.cards {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.6rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.4rem;
+  border: 3px solid #4da8da;
+  border-radius: 10px;
+  padding: 1.4rem;
+}
+
+.card-image-container {
+  display: block;
+  max-width: 30rem;
+  border-radius: 7px;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.card-image-container:hover {
+  transform: scale(1.1);
+}
+
+.card-title {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.card-likes {
+  color: #ec4252;
+  margin-block-start: 1.33em;
+  margin-block-end: 1.33em;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+  font-weight: bold;
+  background-color: #eefbfb;
+}
+
+.card-likes:hover {
+  background-color: #ec4252;
+}
+
+.card-likes:active {
+  background-color: #671050;
+}
+
+/* end main */
+
+/* modal start */
+.modal-container {
+  position: fixed;
+  width: 60%;
+  height: 95%;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid #bec4c1;
+  border-radius: 10px;
+  background-color: #12232e;
+  overflow-y: auto;
+}
+
+.bg-body-modal {
+  background-color: #000000e6;
+  filter: blur(5px);
+}
+
+.modal-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 15px;
+  margin-top: 5px;
+}
+
+.show-modal {
+  display: flex;
+}
+
+.modal-header h2 {
+  font-size: 50px;
+}
+
+.btn-close-modal {
+  position: absolute;
+  top: 8px;
+  right: 38px;
+  align-self: flex-end;
+  border-style: none;
+  border-radius: 50%;
+  background-color: #fff;
+  font-size: 3rem;
+  cursor: pointer;
+  outline: none;
+  width: 4rem;
+  height: 4rem;
+  margin: 2rem 2rem 0 0;
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+}
+
+.btn-close-modal:hover {
+  color: #4da8da;
+  background-color: #203647;
+}
+
+.btn-close-modal:active {
+  color: #eefbfb;
+  background-color: #4da8da;
+}
+
+.modal-card img {
+  width: 20%;
+  border-radius: 5px;
+}
+
+.modal-card .info-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 50px;
+  row-gap: 5px;
+  margin-top: 10px;
+}
+
+.modal-card h3 {
+  color: #007cc7;
+  font-size: 25px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.modal-card p {
+  text-align: center;
+  font-size: 21px;
+  line-height: 30px;
+}
+
+.rating {
+  color: #007cc7;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  row-gap: 16px;
+  margin: 10px 0;
+  padding: 10px;
+}
+
+.form input {
+  padding: 5px;
+  height: 35px;
+  border-radius: 5px;
+  font-size: 20px;
+}
+
+.form textarea {
+  height: 100px;
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 20px;
+}
+
+.form button {
+  width: 120px;
+  height: 40px;
+  font-size: 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007cc7;
+  color: #fff;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.form button:hover {
+  border: 1px solid #fff;
+}
+
+.list {
+  font-size: 20px;
+  list-style: none;
+  row-gap: 5px;
+  margin-bottom: 10px;
+}
+
+.list li {
+  margin-top: 10px;
+}
+
+.input-date {
+  width: 100%;
+}
+
+/* modal end */
