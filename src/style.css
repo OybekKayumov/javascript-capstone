@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Asap:ital,wght@1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
 
 * {
   margin: 0;
@@ -16,8 +17,81 @@ body {
   background-color: #12232e;
 }
 
+ul {
+  list-style: none;
+}
+
 a {
   color: #eefbfb;
+  all: unset;
+}
+
+button {
+  border-radius: 5px;
+  border: 2px solid #007cc7;
+  background-color: #4da8da;
+  height: 3rem;
+  width: 9rem;
+  font-weight: bolder;
+}
+
+button:hover {
+  border: #eefbfb;
+  background-color: #4da8da;
+  color: #eefbfb;
+  font-weight: bolder;
+}
+
+.sub-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin: 24px 5%;
+}
+
+.movies {
+  font-weight: 300;
+  color: #eefbfb;
+  background-color: #007cc7;
+  padding: 4px 16px;
+  border-radius: 4px;
+}
+
+.filter {
+  font-weight: 300;
+  color: #203647;
+  background-color: #eefbfb;
+  padding: 4px 16px;
+  border-radius: 4px;
+}
+
+.center {
+  text-align: center;
+  margin-bottom: 50px;
+  font-family: 'Rubik', sans-serif;
+  font-size: 18px;
+}
+
+.pagination a {
+  cursor: pointer;
+  color: #12232e;
+  padding: 8px 16px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+  background-color: #eefbfb;
+  border-radius: 4px;
+}
+
+.pagination a.active,
+.blue {
+  background-color: #007cc7;
+  color: #eefbfb;
+}
+
+.pagination a.hover {
+  background-color: #eefbfb;
+  color: #007cc7;
 }
 
 header,
@@ -27,14 +101,24 @@ footer {
   height: 10vh;
   justify-content: space-between;
   align-items: center;
-  margin: 2.5rem auto;
+  margin: 2rem auto;
   padding: 0 2rem;
   font-size: 2rem;
   border: 3px solid #4da8da;
+  border-radius: 10px;
+  background-color: #e5e5e5;
+  z-index: 1;
 }
 
 h1 {
   font-size: 34px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.white-blue {
+  color: #eefbfb;
+  background-color: #4da8da;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 .logo {
@@ -47,11 +131,59 @@ h1 {
   list-style: none;
   gap: 2rem;
   cursor: pointer;
+  font-size: 18px;
+  font-family: 'Oswald', sans-serif;
+  color: #555;
 }
 
 .nav-item:not(:last-child) {
   border-right: 2.5px solid #007cc7;
   padding-right: 1rem;
+}
+
+.nav-item:hover {
+  color: #4da8da;
+}
+
+.form-control {
+  width: 60%;
+  height: 34px;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #555;
+  background-image: none;
+  border: 2px solid #4da8da;
+  border-radius: 4px;
+}
+
+footer h1 {
+  color: #203647;
+  font-size: 26px;
+}
+
+.follow {
+  color: #007cc7;
+  font-size: 14px;
+  font-family: 'Asap', sans-serif;
+  font-weight: 600;
+}
+
+.connect {
+  display: flex;
+  gap: 1rem;
+}
+
+.fa:hover {
+  opacity: 0.7;
+}
+
+.fa-twitter,
+.fa-github,
+.fa-linkedin,
+.fa-medium,
+.fa-angellist {
+  color: #ec4252;
 }
 
 /* main */
@@ -71,6 +203,42 @@ h1 {
   border: 3px solid #4da8da;
   border-radius: 10px;
   padding: 1.4rem;
+}
+
+.card-image-container {
+  display: block;
+  max-width: 30rem;
+  border-radius: 7px;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.card-image-container:hover {
+  transform: scale(1.1);
+}
+
+.card-title {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.card-likes {
+  color: #ec4252;
+  margin-block-start: 1.33em;
+  margin-block-end: 1.33em;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+  font-weight: bold;
+  background-color: #eefbfb;
+}
+
+.card-likes:hover {
+  background-color: #ec4252;
+}
+
+.card-likes:active {
+  background-color: #671050;
 }
 
 /* end main */
@@ -202,13 +370,13 @@ h1 {
   border: none;
   border-radius: 5px;
   background-color: #007cc7;
-  color: white;
+  color: #fff;
   cursor: pointer;
   margin-top: 10px;
 }
 
 .form button:hover {
-  border: 1px solid white;
+  border: 1px solid #fff;
 }
 
 .list {
