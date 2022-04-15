@@ -17,6 +17,10 @@ body {
   background-color: #12232e;
 }
 
+ul {
+  list-style: none;
+}
+
 a {
   color: #eefbfb;
   all: unset;
@@ -88,8 +92,25 @@ h1 {
 }
 
 footer h1 {
+  color: #203647;
+  font-size: 26px;
+}
+
+.connect {
+  display: flex;
+  gap: 1rem;
+}
+
+.fa:hover {
+  opacity: 0.7;
+}
+
+.fa-twitter,
+.fa-github,
+.fa-linkedin,
+.fa-medium,
+.fa-angellist {
   color: #007cc7;
-  font-size: 30px;
 }
 
 /* main */

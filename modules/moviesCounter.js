@@ -16,7 +16,7 @@ const countDisplay = (count) => {
   // navList.appendChild('li');
 
   const navList1 = document.querySelector('#count-movies');
-  navList1.innerHTML = `<li class="nav-item">(${count}) MOVIES1</li>`;
+  navList1.innerHTML = `<li class="nav-item">(${count}) MOVIES</li>`;
 };
 
 const countItems = (movies) => {
