@@ -1,1 +1,79 @@
-<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Webpack Exercise</title><script defer="defer" src="main.js"></script></head><body><h1>Hello webpack!</h1></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Capstone</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script defer src="/javascript-capstone/main.js"></script></head>
+<body>
+    <div class="container">
+    <header>
+        <a href="#">
+            <h1 class="logo"><span class="white-blue">456</span>movies</h1>
+        </a>
+        <nav>
+            <ul class="nav-list">
+              <li class="nav-item">HOME</li>
+              <li class="nav-item" id="count-movies"></li>
+              <li class="nav-item">TV-SERIES</li>
+              <li class="nav-item">GENRE</li>
+              <li class="nav-item">REQUEST</li>
+            </ul>
+        </nav>
+
+        <div class="search">
+          <input class="form-control search-input" type="text" placeholder="Searching..." name="q" id="s" value="" data-swplive="true">
+        </div>
+    </header>
+
+    <div class="center">     
+      <div class="sub-header">
+        <h2 class="movies">Movies</h2>
+        <h2 class="filter">Filter</h2>
+      </div>        
+  
+      <div class="pagination">
+        <a class="active blue" href="#">1</a>
+        <a href="#">2</a>
+        <a href="#">3</a>
+        <a href="#" class="active blue">...</a>
+        <a href="#">269</a>
+        <a href="#">270</a>          
+        <a href="#">&raquo;</a>
+      </div>
+    </div> 
+
+    <section class="cards"></section>
+
+    <footer>
+        <ul class="nav-list">
+          <li class="nav-item">MOVIES</li>
+          <li class="nav-item">HELP</li>
+          <li class="nav-item">FREE MOVIES</li>
+          <li class="nav-item">STAY CONNECTED
+            <ul class="connect">
+              <li>Fahd : <a href="https://twitter.com/fahd_rahali" target=”_blank” class="fa fa-twitter"></a></li>
+              <li><a href="https://github.com/fahdrahali" target=”_blank” class="fa fa-github"></a></li>
+              <li><a href="https://www.linkedin.com/in/fahd-rahali/" target=”_blank” class="fa fa-linkedin"></a></li>
+              <li><a href="#" class="fa fa-medium"></a></li>
+              <li><a href="#" class="fa fa-angellist"></a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><span class="follow">star and follow us on social networking:</span>
+            <ul class="connect">
+              <li>Oybek: <a href="https://twitter.com/KayumovOybek" target=”_blank” class="fa fa-twitter"></a></li>
+              <li><a href="https://github.com/OybekKayumov" target=”_blank” class="fa fa-github"></a></li>
+              <li><a href="https://www.linkedin.com/in/oybek-kayumov-54a8485b/" target=”_blank” class="fa fa-linkedin"></a></li>
+              <li><a href="#" class="fa fa-medium"></a></li>
+              <li><a href="#" class="fa fa-angellist"></a></li>
+            </ul>
+          </li>
+        </ul>
+        <h1>Copyrigth &copy; 2022</h1>
+      </footer>
+    </div>
+    <div id="modal-container" class="modal-container"></div>
+    <script type="module" src="index.js"></script>
+</body>
+</html>
