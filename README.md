@@ -27,11 +27,12 @@
 
 ## Live Demo (if available)
 
-[Live Demo Link](-capstone/dist)
+[Live Demo Link](https://oybekkayumov.github.io/javascript-capstone/)
 
 ## Presentation
 
-[Presentation video link](https://www.loom.com/share/)
+[Presentation video link](https://www.loom.com/share/17baa2a3d3e143f38b81672ab24f6851
+)
 
 ## Getting Started
 
