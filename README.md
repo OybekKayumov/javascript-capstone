@@ -34,7 +34,7 @@
 - Windows 10
 - Ubuntu
 
-## Live Demo (if available)
+## Live Demo
 
 [Live Demo Link](https://oybekkayumov.github.io/javascript-capstone/)
 
